@@ -1,0 +1,12 @@
+.masonry-container {
+  height: 100vh;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.masonry-item {
+  background-color: hotpink;
+  margin: 5px;
+}

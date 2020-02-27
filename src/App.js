@@ -5,11 +5,7 @@ import "./styles.css";
 import Cards from "./Cards";
 export default class App extends React.Component {
   render() {
-    return (
-      <div>
-        <Cards />
-      </div>
-    );
+    return <Cards />;
   }
 }
 

@@ -5,9 +5,6 @@
   text-align: center;
 }
 
-.container {
-}
-
 .cards-container {
   margin: 0 auto;
   width: 90%;
@@ -18,10 +15,12 @@
 
 .count-val {
   font-weight: bold;
-  font-size: 30px;
-  border: 1px solid #000;
+  font-size: 23px;
   display: flex;
   justify-content: center;
+  display: inline-block;
+  width: 25px;
+  text-align: center;
 }
 
 .cards-count {
@@ -37,6 +36,7 @@
   height: 100%;
   transition: 0.4s all;
   transform-style: preserve-3d;
+  background-color: #1ecfd6;
 }
 
 .scene {
@@ -56,7 +56,7 @@
 }
 
 .card__face--front {
-  background-color: tomato;
+  background-color: #edd170;
 }
 
 .card__face--back {
@@ -75,4 +75,16 @@
   background-image: url("./giphy.gif");
   background-size: contain;
   background-position: 50% 50%;
+}
+
+.btn__count {
+  height: 36px;
+  border: none;
+  background-color: #c05640;
+}
+
+.btn__reload {
+  height: 36px;
+  border: none;
+  background-color: #c05640;
 }

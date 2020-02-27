@@ -8,10 +8,15 @@ const random = require("random");
 console.log(random.int(1, 5));
 const Cards = () => {
   const createNewCardArr = arrLength => {
-    const randomCard = Math.ceil(Math.random() * (arrLength - 2) + 1);
+    let randomCard = 0;
+    if (arrLength === 2) {
+      Math.random() > 0.5 ? (randomCard = 1) : (randomCard = 2);
+    } else {
+      randomCard = Math.ceil(Math.random() * (arrLength - 1) + 1);
+    }
 
     return Array.from({ length: arrLength }, (v, k) => {
-      return { visible: "hide", special: k === randomCard ? true : false };
+      return { visible: "hide", special: k === randomCard - 1 ? true : false };
     });
   };
   const [countCards, setCountCards] = useState(createNewCardArr(2));
@@ -49,7 +54,7 @@ const Cards = () => {
         removeCard={removeCard}
       />
       <div className="menu">
-        <button className=" blue darken-1 btn" onClick={flipDeck}>
+        <button className=" btn__reload" onClick={flipDeck}>
           reload
         </button>
       </div>
