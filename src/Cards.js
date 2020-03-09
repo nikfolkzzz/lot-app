@@ -39,7 +39,6 @@ const Cards = () => {
     <Card
       cardState={countCards[index]}
       flipCard={flipCard}
-      restartCards={flipDeck}
       key={index}
       index={index}
       value={item}
@@ -47,18 +46,15 @@ const Cards = () => {
   ));
 
   return (
-    <div className="cards-container">
+    <div className="container">
       <CardsCount
         count={countCards.length}
         addCard={addCard}
         removeCard={removeCard}
+        restartCards={flipDeck}
       />
-      <div className="menu">
-        <button className=" btn__reload" onClick={flipDeck}>
-          reload
-        </button>
-      </div>
-      {card}
+
+      <div className="cards-container">{card}</div>
     </div>
   );
 };

@@ -10,6 +10,9 @@ const CardsCount = props => {
       <button className="btn__count" onClick={() => props.addCard("+")}>
         pls+
       </button>
+      <button className=" btn__reload" onClick={props.restartCards}>
+        reload
+      </button>
     </div>
   );
 };

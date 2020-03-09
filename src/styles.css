@@ -7,7 +7,7 @@
 
 .cards-container {
   margin: 0 auto;
-  width: 90%;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -27,6 +27,7 @@
 .cards-count {
   display: flex;
   justify-content: start;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -90,4 +91,22 @@
   border: none;
   background-color: #c05640;
   color: #edd170;
+  margin-left: auto;
+}
+
+@media (min-width: 320px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
